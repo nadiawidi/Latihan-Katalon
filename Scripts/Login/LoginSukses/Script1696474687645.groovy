@@ -17,3 +17,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://www.saucedemo.com/')
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Swag Labs/div_Swag Labs'), 0)
+
+WebUI.verifyElementText(findTestObject('Object Repository/Page_Swag Labs/input_Swag Labs_user-name'), '')
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Swag Labs/input_Swag Labs_password'), 0)
+
+WebUI.verifyElementClickable(findTestObject('Object Repository/Page_Swag Labs/input_Swag Labs_login-button'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Swag Labs/input_Swag Labs_user-name'), 'standard_user')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Swag Labs/input_Swag Labs_password'), 'qcu24s4901FyWDTwXGr6XA==')
+
+WebUI.click(findTestObject('Object Repository/Page_Swag Labs/input_Swag Labs_login-button'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Swag Labs/span_Products'), 0)
+
+WebUI.click(findTestObject('Object Repository/Page_Swag Labs/a_Name (A to Z)_item_4_img_link'))
+
+WebUI.closeBrowser()
+
